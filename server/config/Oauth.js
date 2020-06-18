@@ -1,4 +1,5 @@
 module.exports = {
+    tokenExpireTime: 360000,
     isOauthConfig: { isGoogleAuth: true, isFacebookAuth: true, },
     oauthConfig: {
       googleAuth: {

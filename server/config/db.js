@@ -1,6 +1,6 @@
 module.exports = {
   db: {
-    MONGO_SERVER_CONNECT_STR:"mongodb+srv://new-user_123:Passw0rd123@resumebuilder-v9d9p.mongodb.net/test?",
+    MONGO_SERVER_CONNECT_STR:"mongodb+srv://new-user_123:Passw0rd123@resumebuilder-v9d9p.mongodb.net/resumebuilder?",
     poolSize: process.env.poolSize || 5,
     reconnectTries: process.env.dbReconnectTries || Number.MAX_VALUE,
     reconnectInterval: process.env.dbReconnectInterval || 1000,

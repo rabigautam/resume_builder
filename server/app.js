@@ -15,6 +15,8 @@ const app = express();
 const auth = require('./helpers/authorization/passport-auth');
 auth(passport);
 
+
+
 // Body parser middleware
 
 // create application/json parser
@@ -30,9 +32,7 @@ app.use(
     extended: false,
   }),
 );
-//database connection
-const database = require("./helpers/database/app");
-database.createConnection();
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -40,12 +40,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//database connection
+const database = require("./helpers/database/app");
+database.createConnection();
+
 // Passport middleware
 app.use(passport.initialize());
 
 // Passport Config
 require('./helpers/passport')(passport);
-
 // CORS setup for dev
 app.use(function (req, res, next) {
   req.client_ip_address = requestIp.getClientIp(req);
