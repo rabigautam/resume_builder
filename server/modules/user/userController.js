@@ -8,11 +8,7 @@ const userSch = require('./userSchema');
 const userController = {};
 userController.test = async (req,res,next)=>{
    try{
-       let data=req.body
-       const newResume=  new userSch(data);
-       const saveResume= await newResume.save();
-       return otherHelper.sendResponse(res, httpStatus.OK, true, saveResume, null, 'saved', null);
-
+       res.json({hello:"world"});
    }catch(err){
        next(err);
    }

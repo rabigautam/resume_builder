@@ -7,8 +7,8 @@ module.exports = {
         client_secret: 'NXLfMsYNkKvEQvZnGLMC92q0',
       },
       facebookAuth: {
-        FACEBOOK_APP_ID: '840511659768885',
-        FACEBOOK_APP_SECRET: 'b72d4db57e70b8f32189e0826b38f7ba',
+        FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID,
+        FACEBOOK_APP_SECRET: process.env.FACEBOOK_APP_SECRET,
       }
     }
 }
