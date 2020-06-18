@@ -6,8 +6,10 @@ const userModule=require('../../modules/user/userController');
  * @description Tests users route
  * @access Public
  */
-// router.get('/', userModule.test);
-router.post('/', userModule.test);
+router.get('/', userModule.test);
+router.post('/register', userModule.register);
+// router.post('/login/google/', passport.authenticate('google-token'), userModule.loginGOath);
+// router.post('/login/facebook/',  passport.authenticate('facebook-token'), userModule.loginGOath);
 
 
 module.exports = router;
