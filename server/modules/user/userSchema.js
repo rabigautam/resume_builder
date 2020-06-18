@@ -3,8 +3,8 @@ const schema = mongoose.Schema;
 
 const userSchema = new schema({
   name: { type: String },
-  email: { type: String },
-  password: { type: String },
+  email: { type: String ,required:true},
+  password: { type: String,required:true },
   gender: { type: String, enum: ['male', 'female', 'other'] },
   avatar: { type: String },
   image: { type: schema.Types.Mixed },
