@@ -99,4 +99,4 @@ const resumeInfoSchema = new schema({
     
 
 });
-module.exports = resumeInfo = mongoose.model('resumeInfo', resumeInfoSchema);
+module.exports = resumeInfo = mongoose.model('resumeInfos', resumeInfoSchema);
