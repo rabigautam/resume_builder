@@ -4,10 +4,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const requestIp = require('request-ip');
+const cors = require("cors");
+const routes = require('./routes/index');
 const app = express();
+
+
 
 // Body parser middleware
 
@@ -24,6 +26,9 @@ app.use(
     extended: false,
   }),
 );
+//database conection
+const database = require("./helpers/database/app");
+database.createConnection();
 
 app.use(logger('dev'));
 app.use(express.json());
